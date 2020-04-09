@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<!--
+	Strongly Typed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>休業手当・雇用調整助成金概算計算サイト</title>
+		<meta charset="utf-8" />
+		<meta content="使用者が労働者に支払う休業手当の額や、雇用調整助成金の助成額を概算で計算するサイトです。" name="description">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="new.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
+		<link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="48x48" href="images/android-chrome-48x48.png">
+
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header" class="alt">
+		<span class="logo"><img src="images/logo.png" alt="" /></span>
+			<h2>休業手当・雇用調整助成額概算計算サイト</h2>
+			<h5>順に入力していくだけで、休業手当と雇用調整助成金の概算額が計算できるサイトです</h5>
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li><a href="#intro" class="active">制度の簡単な説明</a></li>
+				<li><a href="#first">休業手当額計算</a></li>
+				<li><a href="#second">雇用調整助成金計算</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+		<!-- Introduction -->
+		<section id="intro" class="main">
+		<div class="spotlight">
+		<div class="content">
+			<header class="major">
+			<h2>休業手当とは</h2></header>
+			<p>労働基準法に基づいて、使用者（事業主）が労働者に支払う手当の名称です。
+			よく休業補償と混同されることがありますが、休業補償が労働中の災害による償いの生活保障であるのに対し
+			休業手当は、使用者側の事由によって労働者に休業させた場合に支払が必要となります。</p>
+			<ul class="statistics">
+				<li class="style1">
+					<span class=""><img src="images/betsumono.png"></span>
+					<h5><span class="h5col">休業手当と休業補償は別物</span></h5>
+				</li>
+				<li class="style2">
+					<span class=""><img src="images/erai.png"></span>
+					<h5><span class="h5col">使用者側の事由は幅広い</span></h5>
+				</li>
+				<li class="style3">
+					<span class=""><img src="images/takara.png"></span>
+					<h5><span class="h5col">休業手当の単価は平均賃金の６０％以上</span></h5>
+				</li>
+				<li class="style4">
+					<span class=""><img src="images/tax.png"></span>
+					<h5><span class="h5col">休業手当は所得税の課税対象</span></h5>
+				</li>
+			</ul>
+
+			<header class="major">
+			<h2>雇用調整助成金とは</h2></header>
+			<p>厚生労働省が管掌しており、要件を満たせば受け取れる給付金です。
+			ここでは要件をざっくりと説明します。</p>
+			<ul class="statistics">
+				<li class="style1">
+					<i class="fas fa-yen-sign fa-2x"></i>
+					<h5><span class="h5col">雇用保険料その他労働保険料や税金等を納めていること</span></h5>
+				</li>
+				<li class="style2">
+					<i class="fas fa-calendar-alt fa-2x"></i>
+					<h5><span class="h5col">提出した計画に基づいて休業を行い、休業手当を支払っていること</span></h5>
+				</li>
+				<li class="style3">
+					<i class="fas fa-user-clock fa-2x"></i>
+					<h5><span class="h5col">休業手当を支払った被保険者が６か月以上被保険であること</span></h5>
+				</li>
+				<li class="style4">
+					<i class="fas fa-sort-amount-up-alt fa-2x"></i>
+					<h5><span class="h5col">生産性指標要件を満たしていること</span></h5>
+				</li>
+				<li class="style5">
+					<i class="fas fa-map fa-2x"></i>
+					<h5><span class="h5col">前回受給したとき、期間最終日の翌日から一年以上経過していること</span></h5>
+				</li>
+			</ul>
+			<p>社会情勢により、要件が緩和・変更となる場合もありますので、届出を検討の際は
+			厚生労働省の雇用調整助成金ページ等をご確認ください。</p>
+
+			<footer class="major">
+			<ul class="actions special">
+				<li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/kyufukin/pageL07.html" class="button">厚生労働省：雇用調整助成金のページ</a></li>
+			</ul>
+			</footer>
+
+		</div>
+		</div>
+		</section>
+
+		<!-- First Section -->
+		<section id="first" class="main special">
+		<header class="major">
+		<h2>休業手当</h2>
+		</header>
+			<div id="">
+				<p>１．休業・時短を開始する日を選んでください</p>
+				<input type="text" id="date1" placeholder="日付を選択してください" readonly onchange="dispF()">
+			</div>
+
+			<div id="kyuboxf">
+				<p>２．休業・時短する方の賃金締め日を入力してください
+				毎月<input type="number" min="1" max="29" id="shimebi1" onchange="kikan(); dispS()">日
+				<br><br>
+				<input type="checkbox" value="32" id="shimebi2" onchange="kikan(); dispS()">
+				<label for="shimebi2">締め日が末日の場合はチェック</label></p>
+				<p id="errmsg"></p>
+			</div>
+
+			<div id="kyuboxs">
+				<p>３．休業・時短する方の総支給額を期間毎に入力してください</p>
+				<h3 id="fmon"></h3><input type="number" id="fmoney" step="10" value="0" min="0">円
+				<h3 id="smon"></h3><input type="number" id="smoney" step="10" value="0" min="0">円
+				<h3 id="tmon"></h3><input type="number" id="tmoney" step="10" value="0" min="0">円
+				<br><br>
+				<div class="hidden_box">
+					<input type="checkbox" name="part" id="checkbox_part" onchange=" checkpart(); kikan()">
+					<label for ="checkbox_part">アルバイト・パートの方の場合はチェック</label>
+					<div class="hidden_show">
+					<p>アルバイト・パートの方の期間毎の労働日数を入力してください</p>
+					<h3 id="pfmon"></h3><input type="number" min="1" max="31" id="fpart" onchange="checkpart()">日
+					<h3 id="psmon"></h3><input type="number" min="1" max="31" id="spart" onchange="checkpart()">日
+					<h3 id="ptmon"></h3><input type="number" min="1" max="31" id="tpart" onchange="checkpart()">日
+					</div>
+				</div>
+				<p>４．休業手当の支給率を入力してください</p>
+				<input type="number" min="60" max="100" id="ritsu" value="60" required>％
+
+				<br><br>
+				<div id="">
+					<button onclick="teate()">算出する</button>
+				</div>
+			</div>
+
+			<h3 id="kyugyoteate"></h3>
+		</section>
+
+		<!-- Second Section -->
+		<section id="second" class="main special">
+		<header class="major">
+		<h2>雇用調整助成金</h2>
+		</header>
+		<div id="">
+			<p>準備．前年度分の「確定保険料申告書」・「確定保険料一般拠出金算定基礎賃金集計表」・「賃金等の報告」などを用意してください</p>
+			<input type="checkbox" id="kochok" onchange="dispCF()">
+			<label for="kochok">用意した！</label>
+		</div>
+
+		<div id="joseif">
+			<p>１．休業手当の支給率を入力してください</p>
+			<input type="number" min="60" max="100" id="chokyuritsu" value="60" required onblur="dispCS()">％
+		</div>
+
+		<div id="joseis">
+			<p>２．休業・時短を開始した日を選んでください</p>
+			<input type="text" id="date3" placeholder="日付を選択してください" readonly onchange="dispCT()">
+		</div>
+
+		<div id="joseit">
+			<p>３．賃金締め日を入力してください</p>
+			毎月<input type="number" min="1" max="29" id="choshimebi1" onchange="chokikan(); dispCFi()">日
+			<br><br>
+			<input type="checkbox" value="32" id="choshimebi2" onchange="chokikan(); dispCFi()">
+			<label for="choshimebi2">締め日が末日の場合はチェック</label>
+		</div>
+
+		<div id="joseifiv">
+			４．下記期間中の延べ休業日数と短縮となった勤務時間数を入力してください
+			<h3 id="chofmon"></h3>
+			延べ<input type="number" min="0" max="313" id="kyugyoni" value="0" onchange="dispCSi()">日：
+			延べ<input type="number" min="0" id="kyugyoji" value="0" onchange="dispCSi()">時間
+			<br><br>
+			<div class="hidden_box">
+				<input type="checkbox" name="chozangyo" id="checkbox_zikangai" onchange="zikangaikesu()">
+				<label for ="checkbox_zikangai">期間中に時間外労働があった場合はチェック</label>
+				<div class="hidden_show">
+				<p>所定外労働時間数を入力してください</p>
+				延べ<input type="number" min="1" id="chozikangai" value="0" onchange="dispCSi()">時間
+				</div>
+			</div>
+		</div>
+
+		<div id="joseisix">
+			<p>以降、前年度（４月から翌３月）の数字を入力してください
+				<br><br>
+			５．雇用保険料算定基礎賃金額を入力してください</p>
+			<input type="number" min="1000" step="1000" placeholder="千円未満の端数切捨て" id="chochingin" onblur="dispCSe()">円
+		</div>
+
+		<div id="joseisev">
+			<p>６．各月末時の雇用保険被保険者数の平均を入力してください</p>
+			<input type="number" min="1" placeholder="小数点以下切捨て" id="chohiho" onchange="dispCEi()">人
+		</div>
+
+		<div id="joseieig">
+			<p>７．所定労働日数と所定労働時間を入力してください</p>
+			年間<input type="number" min="1" max="313" id="syoteini" value="0" onchange="dispCNi()" required>日：
+			一日<input type="number" min="1" max="8" id="syoteiji" value="0" onchange="dispCNi()" required>時間
+		</div>
+
+		<div id="joseinin">
+			<p>８．助成率の選択</p>
+			<form name="joseiritsu">
+				<input type="radio" id="onetwo" name="demo-priority" checked>
+				<label for="onetwo">1/2（中小企業以外）</label>
+				<input type="radio" id="twothr" name="demo-priority">
+				<label for="twothr">2/3（中小企業）</label>
+				<input type="radio" id="foufiv" name="demo-priority">
+				<label for="foufiv">4/5（緊急特定地域等）</label>
+			</form>
+				<button onclick="chojosei()">算出する</button>
+		</div>
+
+		<h3 id="kochojoseigaku"></h3>
+		</section>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+		<section>
+		<h2>サイト利用の注意事項</h2>
+		<p>一人日当たり助成額単価は令和2年3月1日時点の8,330円を用いています。
+		雇用調整助成金については期間の開始日が平成29年4月1日以降の計算式を使用しています。
+		本サイトの結果はあくまでも概算額となり、その額の受給を保証するものでは決してございません。</p>
+		</section>
+
+		<section>
+		<h2>お役立ちリンク</h2>
+		<dl class="alt">
+			<dt><i class="fas fa-paperclip"></i></dt>
+			<dd><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000080400.html">雇用調整助成金の様式ダウンロード</a></dd>
+			<dt><i class="far fa-file-pdf"></i></dt>
+			<dd><a href="https://www.meti.go.jp/covid-19/pdf/pamphlet.pdf">経済産業省支援策パンフレット</a></dd>
+		</dl>
+			<ul class="icons">
+			　<li><a href="https://twitter.com/spitz_sr" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+			</ul>
+		</section>
+			<p class="copyright">&copy; spitz_sr. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+		</footer>
+
+		</div>
+
+		<script src="new.js"></script>
+		<script src="displa.js"></script>
+		<script src="cho.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+		<script src="https://rawgit.com/jquery/jquery-ui/master/ui/i18n/datepicker-ja.js"></script>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script>
+  	$("#date1").datepicker();
+  	$("#date3").datepicker();
+		</script>
+
+
+	</body>
+</html>

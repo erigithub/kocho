@@ -1,0 +1,24 @@
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_box input:checked ~ .hidden_show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+
+#kyuboxf, #kyuboxs, #kyuboxt, #joseif, #joseis, #joseit,
+#joseifiv, #joseisix, #joseisev, #joseieig, #joseinin {
+  display: none;
+}
+
+span.h5col {
+  color: #ffffff;
+}
