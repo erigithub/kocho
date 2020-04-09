@@ -181,6 +181,13 @@ function checkpart() {
   treki = parseInt(document.getElementById("tpart").value);
   nissu = freki + sreki + treki;
 }
+
+function partkesu() {
+  document.getElementById("fpart").value = 0;
+  document.getElementById("spart").value = 0;
+  document.getElementById("tpart").value = 0;
+}
+
 function teate() {
   //休業手当の計算
   var fmoney = parseInt(document.getElementById("fmoney").value);
