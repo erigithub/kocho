@@ -83,13 +83,20 @@ function chojosei() {
   onetwo = document.joseiritsu.onetwo.checked;
   twothr = document.joseiritsu.twothr.checked;
   foufiv = document.joseiritsu.foufiv.checked;
+  thrfou = document.joseiritsu.thrfou.checked;
+  ninten = document.joseiritsu.ninten.checked;
   if(onetwo == true) {
-    jnana = (1 / 2);
+    jnana = ((1 / 2) * 100);
   }else if (twothr == true) {
-    jnana = (2 / 3);
+    jnana = ((2 / 3) * 100);
   }else if (foufiv == true) {
-    jnana = (4 / 5);
+    jnana = ((4 / 5) * 100);
+  }else if (thrfou == true) {
+    jnana = ((3 / 4) * 100);
+  }else if (ninten == true) {
+    jnana = ((9 / 10) * 100);
   }
+
   var jgo = parseInt(document.getElementById("chokyuritsu").value);
   var jkyuu = parseInt(document.getElementById("chozikangai").value); //無い場合も
   var jhachiichi = parseInt(document.getElementById("kyugyoni").value); //無い場合も
@@ -107,7 +114,7 @@ function chojosei() {
   if(kijunchin > 8330) {
     kijunchin = 8330;
   }
-  var joseigakutanka = Math.ceil(kijunchin * jnana);
+  var joseigakutanka = Math.ceil(kijunchin * jnana / 100);
   var jzitan = Math.ceil(jhachini / jsannichi);
   if(isNaN(jzitan) == true) {
       jzitan = 0;
