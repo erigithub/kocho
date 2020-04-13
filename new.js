@@ -179,7 +179,7 @@ function checkpart() {
   freki = parseInt(document.getElementById("fpart").value);
   sreki = parseInt(document.getElementById("spart").value);
   treki = parseInt(document.getElementById("tpart").value);
-  nissu = freki + sreki + treki;
+  partnissu = freki + sreki + treki;
 }
 
 function partkesu() {
@@ -194,8 +194,25 @@ function teate() {
   var smoney = parseInt(document.getElementById("smoney").value);
   var tmoney = parseInt(document.getElementById("tmoney").value);
   var ritsu = parseInt(document.getElementById("ritsu").value);
+
+  freki = parseInt(document.getElementById("fpart").value);
+  sreki = parseInt(document.getElementById("spart").value);
+  treki = parseInt(document.getElementById("tpart").value);
+  partnissu = freki + sreki + treki;
+
   let chingin = fmoney + smoney + tmoney;
-  let kyugyoteate = (Math.round((Math.round((chingin / nissu) * 100) / 100) * ritsu / 100)).toLocaleString();
+  heichin = Math.round((chingin / nissu) * 100) / 100
+
+  if(partnissu > 0){
+    hikaku_pf = Math.round((chingin / partnissu) * 100) / 100 * 60 / 100;
+    hikaku_ps = Math.round((chingin / nissu) * 100) / 100;
+    if(hikaku_pf > hikaku_ps) {
+      heichin = hikaku_pf;
+    }else {
+      heichin = hikaku_ps;
+    }
+    console.log(hikaku_pf + ":" + hikaku_ps);
+  }
+  let kyugyoteate = (Math.round(heichin * ritsu / 100)).toLocaleString();
   document.getElementById("kyugyoteate").textContent = "休業手当の概算額は" + kyugyoteate + "円です";
-  console.log(Math.round((chingin / nissu) * 100) / 100);
 }
