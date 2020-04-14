@@ -125,7 +125,7 @@ function chojosei() {
   }
   var jnichi = (jhachiichi + jzitan - jzikan);
   var joseigaku = (jnichi * joseigakutanka).toLocaleString();
-  console.log("平均賃金" + heichin + "基準賃金" + kijunchin + "一人当たり" + joseigakutanka + "助成額" + joseigaku);
+  console.log("平均賃金額" + (heichin).toLocaleString() + " 基準賃金額" + (kijunchin).toLocaleString() + " 一人日当たり助成額単価" + (joseigakutanka).toLocaleString() + " 休業等延日数（全日）" + jhachiichi + " 休業等延日数（短時間）" + jzitan);
   document.getElementById("kochojoseigaku").textContent = "雇用調整助成金の概算額は" + joseigaku + "円です";
 }
 
