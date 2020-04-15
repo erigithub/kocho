@@ -127,6 +127,7 @@ function chojosei() {
   var joseigaku = (jnichi * joseigakutanka).toLocaleString();
   console.log("平均賃金額" + (heichin).toLocaleString() + " 基準賃金額" + (kijunchin).toLocaleString() + " 一人日当たり助成額単価" + (joseigakutanka).toLocaleString() + " 休業等延日数（全日）" + jhachiichi + " 休業等延日数（短時間）" + jzitan);
   document.getElementById("kochojoseigaku").textContent = "雇用調整助成金の概算額は" + joseigaku + "円です";
+  document.getElementById("chuuikome").textContent = "教育訓練の実施で更に金額が加算される可能性があります";
 }
 
 function zikangaikesu() {
