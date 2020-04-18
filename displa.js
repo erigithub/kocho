@@ -95,3 +95,14 @@ function dispCNi() {
     document.getElementById("joseinin").style.display ="block";
   }
 }
+
+function tweet() {
+　　//ツイート内容をセット
+  var tw_contents = "休業手当・雇用調整助成金概算計算サイト";
+  var url = "http://web-sroom.herokuapp.com/index.html";
+  var hashtags="概算計算サイト";
+    //#twitter_buttonのhrefにパラメーターを渡す
+  window.open().location.href = ("https://twitter.com/share?url=" +
+  url + "&text=" + tw_contents + "&hashtags=" + hashtags + "&count=none&lang=ja");
+
+}

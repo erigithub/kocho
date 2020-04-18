@@ -27,3 +27,7 @@ span.h5teju {
   color: #ad341c;
   font-weight: bold;
 }
+
+.originalimg img {
+  width:100%;
+}
