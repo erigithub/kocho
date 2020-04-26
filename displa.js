@@ -87,11 +87,26 @@ function dispCEi() {
 }
 
 function dispCNi() {
-  var cninf = document.getElementById("syoteini").value;
-  var cnins = document.getElementById("syoteiji").value;
-  if(cninf == "" && cnins == "") {
+  var cninf = parseInt(document.getElementById("syoteini").value); //parseIntいれた
+  var cnins = parseInt(document.getElementById("syoteiji").value);
+  console.log(cninf + cnins);
+  if(cninf == "0" || cnins == "0") {
     document.getElementById("joseinin").style.display ="none";
   } else {
     document.getElementById("joseinin").style.display ="block";
   }
+  // //休業規模
+  // var csixf = parseInt(document.getElementById("kyugyoni").value); //休業日数
+  // var csixs = parseInt(document.getElementById("kyugyoji").value); //休業時間数
+  // console.log("所定日" + cninf + "　所定時間" + cnins + "　休業日数" + csixf + "　休業時間" + csixs);
+  // if(csixs > 0){
+  //   jikansan = Math.round(csixs / cnins * 100) / 100; //小数点第二位以下切捨て
+  // } else {
+  //   jikansan = 0;
+  // }
+  // if(csixf > 0){} else {
+  //   csixf = 0;
+  // }
+  // kibo = Math.round((jikansan + csixf) / cninf * 100) / 100;
+  // console.log("休業規模" + kibo);
 }
