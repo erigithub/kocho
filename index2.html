@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<!--
+	Strongly Typed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>休業手当・雇用調整助成金概算計算サイト</title>
+		<meta charset="utf-8" />
+		<meta content="使用者が労働者に支払う休業手当の額や、雇用調整助成金の助成額を概算で計算するサイトです。" name="description">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="new.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
+		<link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="48x48" href="images/android-chrome-48x48.png">
+
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header" class="alt">
+		<span class="logo"><img src="images/logo.png" alt="@spitz_sr" /></span>
+			<h2>休業手当・雇用調整助成額概算計算サイト</h2>
+			<h5>順に入力していくだけで、休業手当と雇用調整助成金の概算額が計算できるサイトです</h5>
+		</header>
+		<div id="main">
+		<!-- First Section -->
+		<section id="first" class="main special">
+		<header class="major">
+		<h2>雇用保険基本手当給付日数判定</h2></header>
+		<p>　よく失業手当と言われるのが求職者給付の基本手当です。雇用保険に加入していた方が離職し、
+		求職活動をしている場合に雇用保険の加入期間や年齢によって受給できる場合があります。<br>
+	　日額についてはざっくりですが、離職前6か月間の賃金を180で割った金額に45～80％された額になります。
+		年齢による上限額などもあるので日額の詳細は下記ボタンからご確認ください。
+		ここではちょっと複雑な基本手当の給付日数（何日分をもらえるのか？）を判定します。</p>
+		<ul class="statistics">
+			<li class="style1">
+				<i class="fas fa-yen-sign fa-2x"></i>
+				<h5><span class="h5col">雇用保険の被保険者であった</span></h5>
+			</li>
+			<li class="style2">
+				<i class="fas fa-calendar-alt fa-2x"></i>
+				<h5><span class="h5col">離職後、求職活動を行う</span></h5>
+			</li>
+			<li class="style3">
+				<i class="fas fa-user-clock fa-2x"></i>
+				<h5><span class="h5col">6カ月もしくは1年以上雇用保険に加入していた</span></h5>
+			</li>
+			<li class="style4">
+				<i class="fas fa-sort-amount-up-alt fa-2x"></i>
+				<h5><span class="h5col">65歳以上・短期雇用・日雇いいずれにも該当しない</span></h5>
+			</li>
+		</ul>
+		<footer class="major">
+		<ul class="actions special">
+			<li><a href="https://www.hellowork.mhlw.go.jp/insurance/insurance_basicbenefit.html" class="button"  target="_blank" rel="noopener noreferrer">ハローワークインターネットサービス</a></li>
+		</ul>
+		</footer>
+
+		<form name="kihonqa">
+			<p>Q.1<br>
+			<input type="radio" id="q1_a1" name="qes1" checked>
+			<label for="q1_a1">障害者もしくは就職困難者に当てはまる</label>
+			<input type="radio" id="q1_a2" name="qes1">
+			<label for="q1_a2">それ以外</label>
+			<br>
+			Q.2<br>
+			<input type="radio" id="q2_a1" name="qes2" checked>
+			<label for="q2_a1">定年退職、懲戒解雇、一身上の都合による離職</label>
+			<input type="radio" id="q2_a2" name="qes2">
+			<label for="q2_a2">それ以外</label>
+			<br>
+			Q.3<br>
+			<input type="radio" id="q3_a1" name="qes3" checked>
+			<label for="q3_a1">解雇（懲戒解雇を除く）や事業所の倒産による離職</label>
+			<input type="radio" id="q3_a2" name="qes3">
+			<label for="q3_a2">それ以外</label>
+			<br>
+			Q.4<br>
+			<input type="radio" id="q4_a1" name="qes4" checked>
+			<label for="q4_a1">雇用契約期間満了による離職</label>
+			<input type="radio" id="q4_a2" name="qes4">
+			<label for="q4_a2">それ以外</label>
+			<br>
+			Q.5<br>
+			<input type="radio" id="q5_a1" name="qes5" checked>
+			<label for="q5_a1">契約期間の更新を希望したが更新されなかった</label>
+			<input type="radio" id="q5_a2" name="qes5">
+			<label for="q5_a2">それ以外</label>
+		</p></form>
+		<table class="">
+			<tr>
+				<td>算定基礎期間</td>
+				<td>1年以上～10年未満</td>
+				<td>10年以上～20年未満</td>
+				<td>20年以上</td>
+			</tr>
+			<tr>
+				<td>全年齢</td>
+				<td>90日</td>
+				<td>120日</td>
+				<td>150日</td>
+			</tr>
+		</table>
+
+		<table class="">
+			<tr>
+				<td>算定基礎期間</td>
+				<td>1年未満</td>
+				<td>1年以上</td>
+			</tr>
+			<tr>
+				<td>45歳未満</td>
+				<td rowspan="2">150日</td>
+				<td>300日</td>
+			</tr>
+			<tr>
+				<td>45歳～65歳未満</td>
+				<td>360日</td>
+			</tr>
+		</table>
+
+		<table class="">
+			<tr>
+				<td>算定基礎期間</td>
+				<td>1年未満</td>
+				<td>1年未満～5年未満</td>
+				<td>5年以上～10年未満</td>
+				<td>10年以上～20年未満</td>
+				<td>20年以上</td>
+			</tr>
+			<tr>
+				<td>30歳未満</td>
+				<td rowspan="5">90日</td>
+				<td>90日</td>
+				<td>120日</td>
+				<td>180日</td>
+				<td>―</td>
+			</tr>
+			<tr>
+				<td>30歳以上～35歳未満</td>
+				<td>120日</td>
+				<td rowspan="2">180日</td>
+				<td>210日</td>
+				<td>240日</td>
+			</tr>
+			<tr>
+				<td>35歳以上～45歳未満</td>
+				<td>150日</td>
+				<td>240日</td>
+				<td>270日</td>
+			</tr>
+			<tr>
+				<td>45歳以上～60歳未満</td>
+				<td>180日</td>
+				<td>240日</td>
+				<td>270日</td>
+				<td>330日</td>
+			</tr>
+			<tr>
+				<td>60歳以上～65歳未満</td>
+				<td>150日</td>
+				<td>180日</td>
+				<td>210日</td>
+				<td>240日</td>
+			</tr>
+		</table>
+		</section>
+
+		</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+		<section>
+		<h2>サイト利用の注意事項</h2>
+		<p>最終更新日：2020年4月26日<br>
+			一人日当たり助成額単価は令和2年3月1日時点の8,330円を用いています。
+		雇用調整助成金については期間の開始日が平成29年4月1日以降の計算式を使用しています。
+		休業規模要件・教育訓練加算の計算はされませんのでご注意ください。
+		本サイトの結果はあくまでも概算額となり、その額の受給を保証するものでは決してございません。</p>
+		<a class="twitter-timeline" data-width="400" data-height="400" data-theme="light" href="https://twitter.com/spitz_sr?ref_src=twsrc%5Etfw">Tweets by spitz_sr</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</section>
+
+		<section>
+		<h2>お役立ちリンク</h2>
+		<dl class="alt">
+			<dt><i class="fas fa-paperclip"></i></dt>
+			<dd><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyouchouseijoseikin_20200410_forms.html" target="_blank" rel="noopener noreferrer">新型コロナウイルス感染症対策特例措置用雇用調整助成金の様式ダウンロード</a></dd>
+			<dt><i class="fas fa-paperclip"></i></dt>
+			<dd><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000080400.html" target="_blank" rel="noopener noreferrer">雇用調整助成金の様式ダウンロード</a></dd>
+			<dt><i class="far fa-file-pdf"></i></dt>
+			<dd><a href="https://www.mhlw.go.jp/content/000623230.pdf" target="_blank" rel="noopener noreferrer">【緊急対応期間】雇用調整助成金ガイドブック（様式記載例あり）</a></dd>
+			<dt><i class="far fa-file-pdf"></i></dt>
+			<dd><a href="https://www.meti.go.jp/covid-19/pdf/pamphlet.pdf" target="_blank" rel="noopener noreferrer">経済産業省支援策パンフレット</a></dd>
+			<dt><i class="fas fa-frog"></i></dt>
+			<dd><a href="https://chojugiga.com/" target="_blank" rel="noopener noreferrer">ダ鳥獣戯画 素敵なイラスト素材</a></dd>
+		</dl>
+
+
+		</section>
+			<p class="copyright">&copy; spitz_sr. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+
+		</footer>
+
+		</div>
+
+		<script src="new.js"></script>
+		<script src="displa.js"></script>
+		<script src="cho.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+		<script src="https://rawgit.com/jquery/jquery-ui/master/ui/i18n/datepicker-ja.js"></script>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script>
+  	$("#date1").datepicker();
+  	$("#date3").datepicker();
+		</script>
+
+
+	</body>
+</html>
