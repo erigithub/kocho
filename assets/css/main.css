@@ -2166,7 +2166,7 @@ input, select, textarea {
 	}
 	#shimebi1, #ritsu, #fpart, #spart, #tpart, #syoteiji,
 	 #syoteini, #kyugyoji, #kyugyoni, #chozikangai,
-	 #chokyuritsu, #choshimebi1, #chohiho {
+	 #chokyuritsu, #choshimebi1, #chohiho, #risyokunenrei{
 		width: 20%;
 	}
 		input[type="number"]:focus {

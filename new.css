@@ -15,7 +15,9 @@
 }
 
 #kyuboxf, #kyuboxs, #kyuboxt, #joseif, #joseis, #joseit,
-#joseifiv, #joseisix, #joseisev, #joseieig, #joseinin {
+#joseifiv, #joseisix, #joseisev, #joseieig, #joseinin,
+#type1hyo, #type2hyo, #type3hyo, #kihonqa2, #kihonqa3,
+#kihonqa4, #kihonqa5{
   display: none;
 }
 
@@ -30,4 +32,17 @@ span.h5teju {
 
 .originalimg img {
   width:100%;
+}
+
+/* 年プルダウンの変更 */
+select.ui-datepicker-year{
+  height: 2em!important;      /* 高さ調整 */
+  margin-right:5px!important; /* 「年」との余白設定 */
+  width:120px!important;       /* 幅調整 */
+}
+/* 月プルダウンの変更 */
+select.ui-datepicker-month{
+  height: 2em!important;      /* 高さ調整 */
+  margin-left:5px!important;  /* 「年」との余白設定 */
+  width:100px!important;       /* 幅調整 */
 }

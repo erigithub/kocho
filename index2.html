@@ -37,65 +37,69 @@
 		<h2>雇用保険基本手当給付日数判定</h2></header>
 		<p>　よく失業手当と言われるのが求職者給付の基本手当です。雇用保険に加入していた方が離職し、
 		求職活動をしている場合に雇用保険の加入期間や年齢によって受給できる場合があります。<br>
-	　日額についてはざっくりですが、離職前6か月間の賃金を180で割った金額に45～80％された額になります。
+	　日額については、離職前6か月間の賃金を180で割った金額に45～80％された額になります。
 		年齢による上限額などもあるので日額の詳細は下記ボタンからご確認ください。
-		ここではちょっと複雑な基本手当の給付日数（何日分をもらえるのか？）を判定します。</p>
-		<ul class="statistics">
-			<li class="style1">
-				<i class="fas fa-yen-sign fa-2x"></i>
-				<h5><span class="h5col">雇用保険の被保険者であった</span></h5>
-			</li>
-			<li class="style2">
-				<i class="fas fa-calendar-alt fa-2x"></i>
-				<h5><span class="h5col">離職後、求職活動を行う</span></h5>
-			</li>
-			<li class="style3">
-				<i class="fas fa-user-clock fa-2x"></i>
-				<h5><span class="h5col">6カ月もしくは1年以上雇用保険に加入していた</span></h5>
-			</li>
-			<li class="style4">
-				<i class="fas fa-sort-amount-up-alt fa-2x"></i>
-				<h5><span class="h5col">65歳以上・短期雇用・日雇いいずれにも該当しない</span></h5>
-			</li>
-		</ul>
+		ここではちょっと複雑な基本手当の所定給付日数を判定します。</p>
 		<footer class="major">
 		<ul class="actions special">
 			<li><a href="https://www.hellowork.mhlw.go.jp/insurance/insurance_basicbenefit.html" class="button"  target="_blank" rel="noopener noreferrer">ハローワークインターネットサービス</a></li>
 		</ul>
 		</footer>
 
+		<!-- Third Section -->
+		<section id="third" class="main special">
+		<header class="major">
+		<h2>雇用保険基本手当給付日数判定</h2>
+		</header>
+
 		<form name="kihonqa">
 			<p>Q.1<br>
-			<input type="radio" id="q1_a1" name="qes1" checked>
+			<input type="radio" id="q1_a1" name="qes1" value="q1_yes" onchange="displayQes1()">
 			<label for="q1_a1">障害者もしくは就職困難者に当てはまる</label>
-			<input type="radio" id="q1_a2" name="qes1">
+			<input type="radio" id="q1_a2" name="qes1" value="q1_no" onchange="displayQes1()">
 			<label for="q1_a2">それ以外</label>
 			<br>
-			Q.2<br>
-			<input type="radio" id="q2_a1" name="qes2" checked>
-			<label for="q2_a1">定年退職、懲戒解雇、一身上の都合による離職</label>
-			<input type="radio" id="q2_a2" name="qes2">
-			<label for="q2_a2">それ以外</label>
-			<br>
-			Q.3<br>
-			<input type="radio" id="q3_a1" name="qes3" checked>
-			<label for="q3_a1">解雇（懲戒解雇を除く）や事業所の倒産による離職</label>
-			<input type="radio" id="q3_a2" name="qes3">
-			<label for="q3_a2">それ以外</label>
-			<br>
-			Q.4<br>
-			<input type="radio" id="q4_a1" name="qes4" checked>
-			<label for="q4_a1">雇用契約期間満了による離職</label>
-			<input type="radio" id="q4_a2" name="qes4">
-			<label for="q4_a2">それ以外</label>
-			<br>
-			Q.5<br>
-			<input type="radio" id="q5_a1" name="qes5" checked>
-			<label for="q5_a1">契約期間の更新を希望したが更新されなかった</label>
-			<input type="radio" id="q5_a2" name="qes5">
-			<label for="q5_a2">それ以外</label>
+			<div id="kihonqa2">
+				Q.2<br>
+				<input type="radio" id="q2_a1" name="qes2" value="q2_yes" onchange="displayQes2()">
+				<label for="q2_a1">定年退職、懲戒解雇、一身上の都合による離職</label>
+				<input type="radio" id="q2_a2" name="qes2" value="q2_no" onchange="displayQes2()">
+				<label for="q2_a2">それ以外</label>
+				<br>
+		  </div><div id="kihonqa3">
+				Q.3<br>
+				<input type="radio" id="q3_a1" name="qes3" value="q3_yes" onchange="displayQes3()">
+				<label for="q3_a1">解雇（懲戒解雇を除く）や事業所の倒産による離職</label>
+				<input type="radio" id="q3_a2" name="qes3" value="q3_no" onchange="displayQes3()">
+				<label for="q3_a2">それ以外</label>
+				<br>
+		  </div><div id="kihonqa4">
+				Q.4<br>
+				<input type="radio" id="q4_a1" name="qes4" value="q4_yes" onchange="displayQes4()">
+				<label for="q4_a1">雇用契約期間満了による離職</label>
+				<input type="radio" id="q4_a2" name="qes4" value="q4_no" onchange="displayQes4()">
+				<label for="q4_a2">それ以外</label>
+				<br>
+		  </div><div id="kihonqa5">
+				Q.5<br>
+				<input type="radio" id="q5_a1" name="qes5" value="q5_yes">
+				<label for="q5_a1">契約期間の更新を希望したが更新されなかった</label>
+				<input type="radio" id="q5_a2" name="qes5" value="q5_no">
+				<label for="q5_a2">それ以外</label>
+		  </div>
+		</p>
+		<p>
+			離職日の年齢<input type="number" id="risyokunenrei" value="20" min="16" max="80">歳<br><br>
+			次の年月日は離職票―１を見て入力してください<br>
+			資格取得年月日：
+			<input type="text" id="date4" placeholder="日付を選択してください" readonly><br>
+			　　離職年月日：
+			<input type="text" id="date5" placeholder="日付を選択してください" readonly><br>
 		</p></form>
-		<table class="">
+		<button onclick="kihonteate()">算出する</button>
+		<h3 id="typeresult"></h3>
+		<h3 id="kihonteatenissu"></h3>
+		<table id="type1hyo">
 			<tr>
 				<td>算定基礎期間</td>
 				<td>1年以上～10年未満</td>
@@ -110,7 +114,7 @@
 			</tr>
 		</table>
 
-		<table class="">
+		<table id="type2hyo">
 			<tr>
 				<td>算定基礎期間</td>
 				<td>1年未満</td>
@@ -122,16 +126,16 @@
 				<td>300日</td>
 			</tr>
 			<tr>
-				<td>45歳～65歳未満</td>
+				<td>45歳以上～65歳未満</td>
 				<td>360日</td>
 			</tr>
 		</table>
 
-		<table class="">
+		<table id="type3hyo">
 			<tr>
 				<td>算定基礎期間</td>
 				<td>1年未満</td>
-				<td>1年未満～5年未満</td>
+				<td>1年以上～5年未満</td>
 				<td>5年以上～10年未満</td>
 				<td>10年以上～20年未満</td>
 				<td>20年以上</td>
@@ -213,6 +217,7 @@
 		</div>
 
 		<script src="new.js"></script>
+		<script src="kyufu.js"></script>
 		<script src="displa.js"></script>
 		<script src="cho.js"></script>
 		<script src="assets/js/jquery.min.js"></script>
@@ -227,8 +232,16 @@
 		<script src="https://rawgit.com/jquery/jquery-ui/master/ui/i18n/datepicker-ja.js"></script>
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 		<script>
-  	$("#date1").datepicker();
-  	$("#date3").datepicker();
+  	$("#date4").datepicker({
+			changeYear: true,
+			changeMonth: true,
+			yearRange: "-60:+0"
+		});
+		$("#date5").datepicker({
+			changeYear: true,
+			changeMonth: true,
+			yearRange: "-60:+0"
+		});
 		</script>
 
 

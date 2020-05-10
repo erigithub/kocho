@@ -37,6 +37,7 @@
 				<li><a href="#intro" class="active">制度の簡単な説明</a></li>
 				<li><a href="#first">休業手当額計算</a></li>
 				<li><a href="#second">雇用調整助成金計算</a></li>
+				<li><a href="#third">雇用保険基本手当給付日数判定</a></li>
 				<li><a href="#footer">注意事項・お役立ちリンク</a></li>
 			</ul>
 		</nav>
@@ -47,6 +48,7 @@
 		<section id="intro" class="main">
 		<div class="spotlight">
 		<div class="content">
+
 			<header class="major">
 			<h2>休業手当とは</h2></header>
 			<p>　労働基準法に基づいて、使用者（事業主）が労働者に支払う手当の名称です。
@@ -129,6 +131,20 @@
 			<footer class="major">
 			<ul class="actions special">
 				<li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/kyufukin/pageL07.html" class="button"  target="_blank" rel="noopener noreferrer">厚生労働省：雇用調整助成金のページ</a></li>
+			</ul>
+			</footer>
+
+			<header class="major">
+			<h2>雇用保険基本手当給付日数判定</h2></header>
+			<p>　よく失業手当と言われるのが求職者給付の基本手当です。雇用保険に加入していた方が離職し、
+			求職活動をしている場合に雇用保険の加入期間や年齢によって受給できる場合があります。
+		　日額については、離職前6か月間の賃金を180で割った金額に45～80％された額になります。
+			年齢による上限額などもあるので日額の詳細は下記ボタンからご確認ください。
+			ここではちょっと複雑な基本手当の所定給付日数を判定します。</p>
+
+			<footer class="major">
+			<ul class="actions special">
+				<li><a href="https://www.hellowork.mhlw.go.jp/insurance/insurance_basicbenefit.html" class="button"  target="_blank" rel="noopener noreferrer">ハローワークインターネットサービス</a></li>
 			</ul>
 			</footer>
 
@@ -273,13 +289,146 @@
 		<h3 id="kochojoseigaku"></h3><br>
 		<h3 id="chuuikome"></h3>
 		</section>
+
+
+				<!-- Third Section -->
+				<section id="third" class="main special">
+				<header class="major">
+				<h2>雇用保険基本手当給付日数判定</h2>
+				</header>
+
+				<form name="kihonqa">
+					<p>Q.1<br>
+					<input type="radio" id="q1_a1" name="qes1" value="q1_yes" onchange="displayQes1()">
+					<label for="q1_a1">障害者もしくは就職困難者に当てはまる</label>
+					<input type="radio" id="q1_a2" name="qes1" value="q1_no" onchange="displayQes1()">
+					<label for="q1_a2">それ以外</label>
+					<br>
+					<div id="kihonqa2">
+						Q.2<br>
+						<input type="radio" id="q2_a1" name="qes2" value="q2_yes" onchange="displayQes2()">
+						<label for="q2_a1">定年退職、懲戒解雇、一身上の都合による離職</label>
+						<input type="radio" id="q2_a2" name="qes2" value="q2_no" onchange="displayQes2()">
+						<label for="q2_a2">それ以外</label>
+						<br>
+				  </div><div id="kihonqa3">
+						Q.3<br>
+						<input type="radio" id="q3_a1" name="qes3" value="q3_yes" onchange="displayQes3()">
+						<label for="q3_a1">解雇（懲戒解雇を除く）や事業所の倒産による離職</label>
+						<input type="radio" id="q3_a2" name="qes3" value="q3_no" onchange="displayQes3()">
+						<label for="q3_a2">それ以外</label>
+						<br>
+				  </div><div id="kihonqa4">
+						Q.4<br>
+						<input type="radio" id="q4_a1" name="qes4" value="q4_yes" onchange="displayQes4()">
+						<label for="q4_a1">雇用契約期間満了による離職</label>
+						<input type="radio" id="q4_a2" name="qes4" value="q4_no" onchange="displayQes4()">
+						<label for="q4_a2">それ以外</label>
+						<br>
+				  </div><div id="kihonqa5">
+						Q.5<br>
+						<input type="radio" id="q5_a1" name="qes5" value="q5_yes">
+						<label for="q5_a1">契約期間の更新を希望したが更新されなかった</label>
+						<input type="radio" id="q5_a2" name="qes5" value="q5_no">
+						<label for="q5_a2">それ以外</label>
+				  </div>
+				</p>
+				<p>
+					離職日の年齢<input type="number" id="risyokunenrei" value="20" min="16" max="80">歳<br><br>
+					次の年月日は離職票―１を見て入力してください<br>
+					資格取得年月日：
+					<input type="text" id="date4" placeholder="日付を選択してください" readonly><br>
+					　　離職年月日：
+					<input type="text" id="date5" placeholder="日付を選択してください" readonly><br>
+				</p></form>
+				<button onclick="kihonteate()">算出する</button>
+				<h3 id="typeresult"></h3>
+				<h3 id="kihonteatenissu"></h3>
+				<table id="type1hyo">
+					<tr>
+						<td>算定基礎期間</td>
+						<td>1年以上～10年未満</td>
+						<td>10年以上～20年未満</td>
+						<td>20年以上</td>
+					</tr>
+					<tr>
+						<td>全年齢</td>
+						<td>90日</td>
+						<td>120日</td>
+						<td>150日</td>
+					</tr>
+				</table>
+
+				<table id="type2hyo">
+					<tr>
+						<td>算定基礎期間</td>
+						<td>1年未満</td>
+						<td>1年以上</td>
+					</tr>
+					<tr>
+						<td>45歳未満</td>
+						<td rowspan="2">150日</td>
+						<td>300日</td>
+					</tr>
+					<tr>
+						<td>45歳以上～65歳未満</td>
+						<td>360日</td>
+					</tr>
+				</table>
+
+				<table id="type3hyo">
+					<tr>
+						<td>算定基礎期間</td>
+						<td>1年未満</td>
+						<td>1年以上～5年未満</td>
+						<td>5年以上～10年未満</td>
+						<td>10年以上～20年未満</td>
+						<td>20年以上</td>
+					</tr>
+					<tr>
+						<td>30歳未満</td>
+						<td rowspan="5">90日</td>
+						<td>90日</td>
+						<td>120日</td>
+						<td>180日</td>
+						<td>―</td>
+					</tr>
+					<tr>
+						<td>30歳以上～35歳未満</td>
+						<td>120日</td>
+						<td rowspan="2">180日</td>
+						<td>210日</td>
+						<td>240日</td>
+					</tr>
+					<tr>
+						<td>35歳以上～45歳未満</td>
+						<td>150日</td>
+						<td>240日</td>
+						<td>270日</td>
+					</tr>
+					<tr>
+						<td>45歳以上～60歳未満</td>
+						<td>180日</td>
+						<td>240日</td>
+						<td>270日</td>
+						<td>330日</td>
+					</tr>
+					<tr>
+						<td>60歳以上～65歳未満</td>
+						<td>150日</td>
+						<td>180日</td>
+						<td>210日</td>
+						<td>240日</td>
+					</tr>
+				</table>
+				</section>
 		</div>
 
 		<!-- Footer -->
 		<footer id="footer">
 		<section>
 		<h2>サイト利用の注意事項</h2>
-		<p>最終更新日：2020年5月6日<br>
+		<p>最終更新日：2020年5月10日<br>
 			一人日当たり助成額単価は令和2年3月1日時点の8,330円を用いています。
 		雇用調整助成金については期間の開始日が平成29年4月1日以降の計算式を使用しています。
 		休業規模要件・教育訓練加算の計算はされませんのでご注意ください。
@@ -312,6 +461,7 @@
 
 		<script src="new.js"></script>
 		<script src="displa.js"></script>
+		<script src="kyufu.js"></script>
 		<script src="cho.js"></script>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -327,6 +477,16 @@
 		<script>
   	$("#date1").datepicker();
   	$("#date3").datepicker();
+		  	$("#date4").datepicker({
+					changeYear: true,
+					changeMonth: true,
+					yearRange: "-60:+0"
+				});
+				$("#date5").datepicker({
+					changeYear: true,
+					changeMonth: true,
+					yearRange: "-60:+0"
+				});
 		</script>
 
 
