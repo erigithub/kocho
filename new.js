@@ -213,6 +213,7 @@ function teate() {
     }
     console.log(hikaku_pf + ":" + hikaku_ps);
   }
+  heikinchin = ((Math.round(heichin / 0.001) / 1000)).toLocaleString();
   let kyugyoteate = (Math.round(heichin * ritsu / 100)).toLocaleString();
-  document.getElementById("kyugyoteate").textContent = "休業手当の概算額は一日あたり" + kyugyoteate + "円です";
+  document.getElementById("kyugyoteate").textContent = "平均賃金は" + heikinchin + "円で、休業手当の概算額は" + kyugyoteate + "円です";
 }
